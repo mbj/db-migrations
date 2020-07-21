@@ -16,6 +16,7 @@ extra-source-files:
 
 dependencies:
 - base
+- conversion
 - mprelude
 - source-constraints
 

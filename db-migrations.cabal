@@ -4,7 +4,7 @@ cabal-version: 1.18
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d385a1e1254b1c98d3c02a6a78c294d310abc0f50f2e4b26184580836302e032
+-- hash: cb749280a9398ccaf5e1708832d6744c615d88dbf615f24f461c9ea0781c8bcf
 
 name:           db-migrations
 version:        0.0.0.1
@@ -38,6 +38,7 @@ library
   ghc-options: -Wall -Wcompat -Werror -Widentities -Wimplicit-prelude -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-exported-signatures -Wmissing-local-signatures -Wmonomorphism-restriction -Wredundant-constraints -fplugin=SourceConstraints -funbox-strict-fields
   build-depends:
       base
+    , conversion
     , mprelude
     , source-constraints
   default-language: Haskell2010
@@ -52,6 +53,7 @@ executable db-migrations
   ghc-options: -Wall -Wcompat -Werror -Widentities -Wimplicit-prelude -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-exported-signatures -Wmissing-local-signatures -Wmonomorphism-restriction -Wredundant-constraints -fplugin=SourceConstraints -funbox-strict-fields -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base
+    , conversion
     , db-migrations
     , mprelude
     , source-constraints
@@ -66,6 +68,7 @@ test-suite devtools
   ghc-options: -Wall -Wcompat -Werror -Widentities -Wimplicit-prelude -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-exported-signatures -Wmissing-local-signatures -Wmonomorphism-restriction -Wredundant-constraints -fplugin=SourceConstraints -funbox-strict-fields -rtsopts -threaded -with-rtsopts=-N
   build-depends:
       base
+    , conversion
     , devtools
     , mprelude
     , source-constraints
